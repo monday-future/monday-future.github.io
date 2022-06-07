@@ -102,7 +102,22 @@ h6 {
     font-family: "IBM Plex Mono", monospace,sans-serif;
     font-style:italic;
     font-size: 10.0pt;
+    flex-grow: 9;
 }
+
+.searchbutton {
+    background-color: black;
+    color: white;
+
+    border: var(--border) solid black;
+    margin-top: 0px;
+    padding: 5px;
+    font-family: "IBM Plex Mono", monospace,sans-serif;
+    font-style:italic;
+    font-size: 10.0pt;
+    font-weight: 700;
+}
+
 
 .datetime{
     display: grid;
@@ -194,9 +209,6 @@ h6 {
     height: auto;
     left: 0px;
 
-    
-
-    transition: all 1s;  
 }
 
 
