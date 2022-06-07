@@ -122,6 +122,18 @@ h6 {
     padding: 10px;
 }
 
+.monsoonbox {
+    border: var(--border) solid black;
+    border-radius: 10px;
+}
+
+.monsoonbox img {
+    flex-shrink: 1;
+    flex-grow: 1;
+    width: 30px;
+    margin: 10px 10px;
+}
+
 .grid {
     display: grid;
     
@@ -240,8 +252,9 @@ h6 {
     
 }
 
-.whereas .haiku img{
-    width: 30px;
+.whereashaiku .haiku img{
+    width: 35px;
+    height: auto;
 }
 
 .container{
