@@ -183,6 +183,10 @@ h6 {
 
 }
 
+.requestcontainer {
+    height: calc(100% - 100px);
+}
+
 .requestimg {
     display: block;
     margin-left: auto;
@@ -241,7 +245,8 @@ h6 {
 }
 
 .haiku {
-    margin: 20px 0;
+    width: 100%;
+    
     display: grid;
     grid-column-start: 2;
     /* grid-column-start: 2;
@@ -263,7 +268,7 @@ h6 {
     padding: 10px 10px 15px 10px;
     margin: 0 0 10px 0;
     
-    font-size: 13pt;
+    font-size: min(13pt,3vw);
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
 }
@@ -271,7 +276,9 @@ h6 {
 .haiku p {
     grid-area: txt;
     text-align: left;
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
+
+    overflow-x: scroll;
     
 }
 
@@ -289,7 +296,7 @@ h6 {
     border: var(--border)solid black;
     padding: 0px 0px 0px 10px; 
 
-    font-size: 10pt;
+    font-size: min(10pt, 2.8vw);
     font-family: "Quicksand", sans-serif;
     font-weight: 400;
     
@@ -307,6 +314,9 @@ h6 {
     font-size: 125%;
 }
 
+@media (max-width:500px) {
+    .replybox {font-size: 3vw}
+}
 
 
 .haiku>.replybox{
@@ -315,7 +325,6 @@ h6 {
     margin-top: 0px; 
     margin-bottom: 0px;
     margin-right: 10px;
-    font-size: 100%;
 }
 
 
@@ -359,13 +368,14 @@ h6 {
     position: relative;
     
     overflow: hidden;
-    width: calc(7em + 10px);
+    /* width: calc(7em + 10px); */
+    width: 100%;
     height: calc(100% + 42px);
 
     padding: 15px 10px 10px 15px;
 
     font-weight: bold;
-    font-size: 13pt;
+    font-size: min(13pt,3vw);
 
     background-color: white;
     
@@ -377,6 +387,7 @@ h6 {
 .submitbutton{
     z-index: 15;
     grid-area: but;
+    width: 100%;
 
     text-align: center;
 
@@ -413,6 +424,7 @@ h6 {
     font-family: "IBM Plex Mono", monospace,sans-serif;
     font-style: italic;
     font-weight: 700;
+    font-size: min(12pt,2.8vw);
 
 
     padding: 10px;

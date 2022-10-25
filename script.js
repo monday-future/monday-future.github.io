@@ -39,7 +39,7 @@ class Haiku {
 
         let text = document.createElement('p')
         text.appendChild( document.createTextNode(this.text) )
-        text.style.whiteSpace = "pre-line"
+        text.style.whiteSpace = "pre"
 
         newHaiku.appendChild( avatar )
         newHaiku.appendChild( text )
@@ -132,7 +132,7 @@ function sylInWord (word){
 
 function regExSylCount(word) {
     word = word.toLowerCase();
-    var t_some = 0;
+    let t_some = 0;
     if(word.length>3)
         {
         if(word.substring(0,4)=="some")
@@ -144,7 +144,7 @@ function regExSylCount(word) {
     word = word.replace(/(?:[^laeiouy]|ed|[^laeiouy]e)$/, '');   
     word = word.replace(/^y/, '');                                 
     //return word.match(/[aeiouy]{1,2}/g).length;   
-    var syl = word.match(/[aeiouy]{1,2}/g);
+    let syl = word.match(/[aeiouy]{1,2}/g);
     //console.log(syl);
     if(syl)
     {
