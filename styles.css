@@ -72,22 +72,16 @@ h6 {
     border: var(--border) solid black;
     border-radius: 25px;
 
+    min-height: calc(100vmin - 30px);
+
 }
 
 .header {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr;
     gap: 10px;
-    padding: 20px;
-    margin: auto;
-}
-
-@media (max-width: 1200px) {
-    .header {grid-template-columns: 1fr;}
-}
-
-@media (max-width: 900px) { 
-    .header h1 {font-size: 30.0pt;}
+    padding: 0px;
+    margin: 10px 30px 10px 30px;
 }
 
 .header h1{
@@ -122,35 +116,6 @@ h6 {
 }
 
 
-.datetime{
-    display: grid;
-    grid-template-columns: 1fr auto 2fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-    
-}
-
-@media (max-width: 658px) {
-    .datetime{grid-template-columns: 1fr auto;}
-}
-
-.datetimebox {
-    border: var(--border) solid black;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.monsoonbox {
-    border: var(--border) solid black;
-    border-radius: 10px;
-}
-
-.monsoonbox img {
-    flex-shrink: 1;
-    flex-grow: 1;
-    width: 30px;
-    margin: 10px 10px;
-}
 
 .grid {
     display: grid;
@@ -159,20 +124,14 @@ h6 {
 
     gap: 10px;
     width: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: 3fr minmax(436px,4fr) 3fr;
 }
 
-
-.newscol {grid-column-end: span 1;}
 
 @media (min-width:1000px) {
-    .grid {grid-template-columns: minmax(436px,2fr) 3fr;}
-    .newscol {grid-column-end: span 2;}
+    .grid {grid-template-columns: 3fr minmax(436px,600px) 3fr;}
 }
-@media (min-width: 1436px) {
-    .grid {grid-template-columns: minmax(436px,25%) 2fr 3fr;}
-    .newscol {grid-column-end: span 1;}
-}
+
 
 
 .widgettitle {
@@ -215,8 +174,40 @@ h6 {
 
 }
 
+.requestimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    object-fit: cover;
+    min-width: 75%;
+    max-width: 100%;
+    max-height: 70vmin;
+    border: var(--border) solid black;
+    border-radius: 25px;
+}
+
+.imgtag {
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+   
+    background-color: black;
+    color: white;
+
+    font-family: "IBM Plex Mono", monospace,sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
 
 .avatar {
+    position: relative;
+    top: -3px;
+    left: -3px;
     height: 50px;
     border-radius: 50%;
     border: var(--border) solid black;
@@ -226,52 +217,203 @@ h6 {
     border-style: dotted;
 }
 
+.haikuList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+}
+
 .haiku {
     margin: 20px 0;
     display: grid;
     grid-column-start: 2;
+    /* grid-column-start: 2;
     grid-column-end: 4;
-    grid-template-columns: auto 4fr 0px;
+    grid-template-columns: auto 4fr 0px; */
+    grid-template-columns: 50px 8fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "ava txt"
+    " .  img"
+    " .   . "
+    ;
+
     gap: 10px;
     align-items: center;
+
+    border: var(--border) solid black;
+    border-radius: 25px;
+    padding: 10px 10px 15px 10px;
+    margin: 0 0 10px 0;
+    
+    font-size: 13pt;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
 }
 
 .haiku p {
+    grid-area: txt;
     text-align: left;
+    padding: 10px;
     
+}
+
+
+.haiku .requestimg{
+    grid-area: img;
+    border: var(--border) solid black;
+    border-radius: 25px;
 }
 
 .haiku>.haiku {
-    margin-top: 0px; 
-    margin-bottom: 0px;
-}
+    margin: 0;
 
-.replybox {
-    width: 100%;
-}
+    
+    border: var(--border)solid black;
+    padding: 0px 0px 0px 10px; 
 
-.replybox textarea{
-    font-family: inherit;
-    font-size: 100%; 
-    width:100%;
-    resize: none; 
-    border: var(--border) solid black;
-    border-radius: 25px;
-    padding: 20px 20px; 
-
-}
-
-.whereas p{
-    text-indent: -6em; 
-    margin-left: 6em;
-    margin-bottom: 0.5em;
+    font-size: 10pt;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
     
 }
 
-.whereashaiku .haiku img{
-    width: 35px;
-    height: auto;
+.replybox {
+    display:grid;
+    grid-template-columns: 8fr 2fr;
+    grid-template-rows:calc(4em + 20px);
+    grid-template-areas: 
+    "haiku syl"
+    "haiku but";
+    width: 100%;
+    margin: 0 0 10px 0;
+    font-size: 125%;
 }
+
+
+
+.haiku>.replybox{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    margin-right: 10px;
+    font-size: 100%;
+}
+
+
+
+.replybox textarea{
+    z-index: 5;
+
+    grid-area: haiku;
+    font-family: "IBM Plex Mono", monospace,sans-serif;
+    font-style: italic; 
+    font-size: inherit;
+    width: calc(100% + 50px);
+    resize: none; 
+
+    background-color: white;
+
+    border: var(--border) solid black;
+    border-radius: 25px;
+    padding: 15px 70px 15px 20px; 
+    margin: 0;
+}
+
+.replybox textarea:focus{
+    outline-style: solid;
+    outline-color: black;
+    outline-offset: -7px;
+    outline-width: 2px;
+}
+
+.replybox input:focus{
+    outline-style: solid;
+    outline-color: white;
+    outline-offset: -5px;
+    outline-width: 2px;
+}
+
+.sylcount{
+    z-index: 10;
+
+    grid-area: syl;
+    position: relative;
+    
+    overflow: hidden;
+    width: calc(7em + 10px);
+    height: calc(100% + 42px);
+
+    padding: 15px 10px 10px 15px;
+
+    font-weight: bold;
+    font-size: 13pt;
+
+    background-color: white;
+    
+    border: var(--border) solid black;
+    border-radius: 25px;
+    
+}
+
+.submitbutton{
+    z-index: 15;
+    grid-area: but;
+
+    text-align: center;
+
+    position: relative;
+
+
+    padding: 10px;
+
+    font-weight: bold;
+
+
+    border: var(--border) solid black;
+    
+    border-radius: 25px;
+
+
+    background-color: black;
+    color: white;
+
+    font-family: "IBM Plex Mono", monospace,sans-serif;
+    font-style:italic;
+    font-size: 10.0pt;
+    font-weight: 700;
+}
+
+.replybutton {
+    grid-column-start: 2;
+    width: fit-content;
+    background-color: black;
+    border: var(--border) solid black;
+    border-radius: 25px;
+
+    color: white;
+    font-family: "IBM Plex Mono", monospace,sans-serif;
+    font-style: italic;
+    font-weight: 700;
+
+
+    padding: 10px;
+
+}
+
+.replybutton:hover {
+    outline-style: solid;
+    outline-color: white;
+    outline-offset: -5px;
+    outline-width: 2px;
+    
+}
+
 
 .container{
     margin: 10px 0px 10px;
@@ -314,71 +456,7 @@ h6 {
     font-weight: 700;
   } 
 
-.news{
-    column-width: 20em;
-}
 
-.news p{
-    margin-bottom: 1em;
-    word-wrap: break-word;
-    column-span: none;
-
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    
-}
-
-.news hr{
-    width: 25%;
-}
-
-.news img{
-    width: 100%;
-    border: var(--border) solid black;
-    float: center;
-    
-}
-
-.library {
-    width: 100%;
-}
-
-.library hr {
-    display: block;
-    margin: 5px 0px 10px 0px;
-    border-style: dashed;
-    border-color: black;
-    border-width: 1px;
-    text-align: center;
-}
-
-.library img {
-    display: block;
-    width: 50%;
-    margin: 5px auto;
-    border-radius: 20px;
-    border: 2px solid black;
-}
-
-.library h4 {
-    text-align: center;
-    font-style: normal;
-    font-family: 'Quicksand',sans-serif;
-    font-size: 15pt;
-}
-
-.library h6 {text-align: center;}
-
-.library>.haiku{
-    border: 2px solid black;
-    padding: 5px 5px; 
-
-}
-
-.library .haiku img{
-    width: 25px;
-}
 
 .noticebox {
     text-align: left;

@@ -13,523 +13,59 @@
         /*to prevent Firefox FOUC, this must be here*/
         let FF_FOUC_FIX;
     </script>
+    
 
 </head>
 
 <body>
     <div class="content" >
         <div class="content" style="margin: 5px; border-radius: 20px">
-            <div class="header">
-                <h1>Monday Morning Homepage</h1>
-                <div class="datetime">
-                    <div class="datetimebox" style="grid-row-start: 1; grid-row-end: 3;">
-                        <h6>it's two days until <br> <strong style="font-size: 14pt;">Blake's birthday</strong></h6>
-                        <h6 style="margin-top: 7px; font-size: 14pt;">(◕ᴗ◕✿)</h6>
-                        
-                    </div>
-                    <div class="datetimebox">
-                        <h4> <strong>✶ TVOC:</strong> 7 mg/m^2 </h4>
-                        <h4> <strong>⊛ CO² :</strong> 470 ppm </h4>
-                    </div>
-                    <div class="monsoonbox">
-                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(45px,1fr)); align-items: center; height: 100%;">
-                            <img src="icons/monsoon.png">
-                            <img src="icons/monsoon.png">
-                            <img src="icons/monsoon.png">
-                            <img src="icons/coming.png">
-                            <img src="icons/coming.png">
-                            <img src="icons/coming.png">
-                            <img src="icons/coming.png">
-                        </div>
-                    </div>
 
-                </div>
-                <form action="https://www.duckduckgo.com/" method="get" style="width: 95%; display: flex;">
-                    <input class="searchbar" type="text" name="q" placeholder="search duck duck goose">
-                    <button class="searchbutton" type="submit" value="search">search</button>
-                </form>
-                
-            </div>
-            
             <div class="grid">
                 <!-- COLUMN 1 -->
+                <div class="col"></div>
                 <div class="col"> 
-                    
-                    <div class="widget">
-                        <div class="widgettitle">
-                            <h4>Haikunet</h4>
-                            <hr>
+                    <div class="header">
+                        <h1>Haikunet</h1>
+                    </div>
+                    <div class="newhaiku">
+                        <div>
+                            <img src='img/garden.png' class="requestimg" alt="request image">
+                            <span class="imgtag">  Request: What is this place? </span>
                         </div>
-                        <div class="widgetcontent">
-                            <div class="haiku">
-                                <img class="avatar" src="people/pavel.jpg">
-                                <p>
-                                    i’m so happy for us     <br>
-                                    lago agrio is clean     <br>
-                                    we took far too long    <br>
-                                </p>
-
-                                <div class="haiku">
-                                    <img class="avatar" src="people/karen.jpg">
-                                    <p>
-                                        it takes time to heal               <br>
-                                        our wounds. we must love ourselves  <br>
-                                        take pride in being better          <br>
-                                    </p>
-                                     
-                                </div>
+                        <div class="replybox">
+                            <form id="new_haiku" onsubmit="submitHaiku(this)" action="javascript:void(0);"> </form>
+                            <textarea form="new_haiku" name="haiku_text" type="text" rows="3" autocomplete="off" placeholder="haiku..." wrap="off" onkeyup="updateSylCount(this)"></textarea>
+                            <div class="sylcount">
+                                ooooo<br>
+                                ooooooo<br>
+                                ooooo<br>
                             </div>
-                            <div class="haiku">
-                                <img class="avatar" src="people/willow.jpg">
-                                <p>
-                                    longfin dace. spikedace.    <br>
-                                    colorado pikeminnow.        <br>
-                                    razorback sucker.           <br>
-                                </p>
-                                <div class="haiku">
-                                    <img class="avatar" src="people/katerina.jpg">
-                                    <p>
-                                        beautiful shiner.           <br>
-                                        sonora sucker. gila chub    <br>
-                                        pupfish. yaqui chub.        <br>
-                                    </p>
-                                     
-                                </div>
-                                <div class="haiku">
-                                    <img class="avatar" src="people/willow.jpg">
-                                    <p>
-                                        salmon salmon sal-          <br>
-                                        mon salmon salmon salmon    <br>
-                                        salmon salmon sal-          <br>
-                                    </p>
-                                     
-                                </div>
-                                <div class="haiku">
-                                    <img class="avatar" src="people/karen.jpg">
-                                    <p>
-                                        please stop fishposting!    <br>
-                                        elise and i are going out.  <br>
-                                        fish better be gone!  >:(  <br>
-                                    </p>
-                                     
-                                </div>
-                            </div>
-                            <div class="haiku">
-                                <img class="avatar" src="people/bradly.jpg">
-                                <p>
-                                    school is bo-oor-ring   <br>
-                                    another climate essay:  <br>
-                                    im going to scream      <br>
-                                </p>
-                            </div>
-                            <div class="haiku">
-                                <img class="avatar" src="people/janet.jpg">
-                                <p>
-                                    fourteen days of sun        <br>
-                                    water spills into dry soil  <br>
-                                    death lingers; he’s gone    <br>
-                                </p>
-                                <div class="haiku">
-                                    <img class="avatar" src="people/karen.jpg">
-                                    <p>
-                                        please, janet. it’s just    <br>
-                                        a plant. you will be alright    <br>
-                                        propagate mine, dear.   <br>
-                                    </p>
-                                </div>
-                                <div class="haiku">
-                                    <img class="avatar" src="people/bradly.jpg">
-                                    <p>
-                                        george the rosemary <br>
-                                        will be sorely missed by all    <br>
-                                        we mourn his loss, lol. <br>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="haiku">
-                                <img class="avatar" src="people/willow.jpg">
-                                <p>
-                                    wildflowers grew    <br>
-                                    along the mountain bush trails  <br>
-                                    now, buffalo grass  <br>
-                                </p>
-                                <div class="haiku">
-                                    <img class="avatar" src="people/pavel.jpg">
-                                    <p>
-                                        when i see the earth    <br>
-                                        should i laugh or should i cry?<br>
-                                        watch what the seed does.  <br>
-                                    </p>
-                                </div>
-                            </div>
+                            <input form="new_haiku" type="submit" class="submitbutton" value="not quite" disabled="true">
                             
-
-
-                            <span class="replybox"><textarea id="reply_haiku" type="text" rows="3" autocomplete="off" placeholder="haiku..." wrap="soft"></textarea> </span>
-                        </div>
-                        
-                    </div>
-
-
-                    <div class="widget">
-                        <div class="widgettitle">
-                            <h4>RefurbPostings.org</h4>
-                            <hr>
-                        </div>
-                        <div class="widgetcontent">
-                            <div class="library">
-                                <h4>Plastic Bag Filled With Clothes</h4>
-                                <h6>[QUALITY: POOR] [PRESOCIETY]</h6>
-                                <img src="img/trashbag.jpg" alt="a trashbag full of clothes">
-                                <h6>Will accept fiber recycling or best offer.</h6>
-                                <div class="haiku">
-                                    <img src="people/rosana.jpg" alt="rosana">
-                                    <p>
-                                        Fiber recycling @ 0.1L/kg
-                                    </p>
-                                </div>
-                                <div class="haiku">
-                                    <img src="people/pavel.jpg" alt="pavel">
-                                    <p>
-                                        My Grandma needs a couple yards of yellow fabric for dress pockets.
-                                    </p>
-                                    <div class="haiku">
-                                        <img src="people/jeff.jpg" alt="jeff">
-                                        <p>
-                                            Done! pm'd
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="haiku">
-                                    <img src="people/willow.jpg" alt="willow">
-                                    <p>
-                                        I have a serger, I can restitch stretch fabrics, how many are there?
-                                    </p>
-                                    <div class="haiku">
-                                        <img src="people/jeff.jpg" alt="jeff">
-                                        <p>
-                                            6 t-shirts and a tank top
-                                        </p>
-                                        <div class="haiku">
-                                            <img src="people/willow.jpg" alt="willow">
-                                            <p>
-                                                I have a serger, I can restitch stretch fabrics, how many are there?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                
-                                <hr>
-
-                                <h4>LOOKING FOR DONATION or TRADE:</h4>
-                                <h6>(no credit)</h6>
-                                <ul>
-                                    <li><em><em>10mm socket wrench</em></em></li>
-                                    <li><em>Weather hardy tomato seed (17ae4 or a890 would be perfect)</em></li>
-                                    <li><em>DNA synthesizer</em></li>
-                                    <li><em>Any eggs for aqua&rsquo;</em></li>
-                                </ul>
-                                <h4>WILLING TO TRADE:</h4>
-                                <ul>
-                                    <li><em><em>Experience tractor programming</em></em></li>
-                                    <li><em>Experience genetic engineering</em></li>
-                                    <li><em>GOOD QUALITY cauliflower (frozen)</em></li>
-                                    <li><em>my stuff (check out my page)</em></li>
-                                </ul>
-                                <div class="haiku">
-                                    <img src="people/willow.jpg" alt="willow">
-                                    <p>
-                                        I just refurbed a DNA sequencer, but it’s BIG. Don’t you live out in the boonies, rosie?
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <!-- COLUMN 2 -->
-                <div class="col">
-                    <div class="widget" style="background-color: rgb(242, 242, 241);">
-                        <div class="widgettitle">
-                            <h4 style="text-decoration: underline overline wavy; font-size: 140%;"><strong">What do You Want to Make Real?</strong></h4>
-                            <hr>
-                        </div>
-                        <div class="widgetcontent">
-                            <div class="noticebox">
-                                <p>
-                                    <em>Monday Morning Homepage</em> is an ongoing prototype exploring imaginative
-                                    frameworks surrounding climate change. When the facts of reality
-                                    paint a picture of severe global collapse, we need to find a way to
-                                    cultivate hope for the future, for our species, and for our planet.
-                                </p>
-                                <br/>
-                                <p>
-                                    This website is a digital artifact from a better, but possible future. The
-                                    same way a newspaper from the past gives us a glimpse into the goings-on
-                                    and lives of its moment, <em>Monday Morning Homepage</em> is a window into the lives
-                                    of a world where we adapted to and overcame the climate crisis.
-                                </p>
-                                <br/>
-                                <p>
-                                    Much like change in the real world, this website centers the local actions
-                                    and happenings within a community. How can we take some of the concepts we
-                                    see here and apply them to our own worlds?
-                                </p>
-                                <br/>
-                                <p style="font-size: 120%;">
-                                    If you are interested in contributing content, writing, or ideas to Monday Morning
-                                    Homepage, please feel free to  
-                                    <a style="font-style: italic; font-weight: bold;" target="_blank" href="https://github.com/monday-future/monday-future.github.io/issues">submit an issue on our GitHub</a>,
-                                    or email
-                                
-                                    <a style="font-style: italic; font-weight: bold;" rel="nofollow" target="_blank" href="mailto:gtenino@ucsd.edu">
-                                        gtenino@ucsd.edu
-                                    </a>.
-                                </p>
-                                <br/>
-                                <br/>
-                                <p>
-                                    i hope your monday is going well,
-                                </p>
-                                <p style="font-style: italic;">
-                                    <strong>- io</strong>
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <div class="widget">
-                        <div class="widgettitle">
-                            <h4 style="text-decoration: underline;"><strong">ATTN: Community Proposal</strong></h4>
-                            <hr>
-                        </div>
-
-                        <div class="widgetcontent">
-                            <h6>please read thouroughly</h6>
-                            <br>
-                            <div class="whereas">                     
-                                <p><strong>Resolution 1032 to Redevelop Park Mall Housing Facility</strong></p>
-                                <p>WHEREAS,    the rate of houselessness in Tucson County has reduced significantly over the last 12 years; and the needs for temporary housing are served by other community facilities; and  </p>
-                                <p>WHEREAS,    the need for additional consumer distribution hubs has expanded with increased reuse; and    </p>
-                                <p>WHEREAS,    general economic forecasting shows 15% increased demand for consumer goods among individuals over the age; and   </p>
-                                <p>WHEREAS,    social research reaches conclusive findings suggesting single-purpouse distribution hubs reduce the effectiveness of distribution of social services; and    </p>
-                                <p>WHEREAS,    the prosperity of our society allows for the expansion of the consumer-library sector in the public domain; now, therefore, be it    </p>
-                                <p>RESOLVED,    By the Community that the elections committee draw a public council with the goal to develop a final proposal for the redevelopment of the Park mall Housing Facility into a space for serving the library-consumer system with finished consumer goods related to the interests of the community; and  </p>
-                                <p>RESOLVED,  this council shall be made up two-thirds of specialists related to library operations, building operations, resource management, and and any other specialty related to infrastructure redevelopment; and </p>
-                                <p>RESOLVED,    this council shall be made up of one-third members of the public drawn as jury  </p>  
-                            </div>
-
-                            <hr style="border-style: dashed;">
-
-                            <span>
-                                <label class="container">
-                                    <input type="radio" id="yes" name="vote">
-                                    <span class="vote">YES</span>
-                                </label>
-                                <label class="container">
-                                    <input type="radio" id="no" name="vote">
-                                    <span class="vote">NO</span>
-                                </label>
-                                <label class="container">
-                                    <input type="radio" id="rework" name="vote">
-                                    <span class="vote">REWORK</span>
-                                </label>
-                                <label class="container">
-                                    <input type="radio" id="abstain" name="vote">
-                                    <span class="vote">ABSTAIN</span>
-                                </label>
-                            </span>
-
-                            <p style="font-size: 8pt;">votes will be tallied in <strong>[ 3 ]</strong> days.</p>
-
-                            <div class="whereashaiku">
-                                <div class="haiku">
-                                    <img class="avatar" src="people/karen.jpg">
-                                    <p>
-                                        The planning committee is trying to take us back to the stone age! Using an old mall for library operations is just going to bring us back to the kind of consumerism that we worked so hard to kick!!
-                                    </p>
-
-                                    <div class="haiku">
-                                        <img class="avatar" src="people/emily.jpg">
-                                        <p>
-                                            Malls once provided non-consumer services. Places to meet and socialize offline, easy access to food and drink, a group activity. We have the capacity to support an operation like this. Not being consumerist doesn’t mean we have to live ascetic lives.
-                                        </p>
-
-                                        <div class="haiku">
-                                            <img class="avatar" src="people/karen.jpg">
-                                            <p>
-                                                This feels like a joke, rebuilding malls? Better to put some crops in there, something green that the stink won’t rub off on!!
-                                            </p>
-                                                
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="haiku">
-                                    <img class="avatar" src="people/emily.jpg">
-                                    <p>
-                                        This place is always empty, it gives me the creeps!!
-                                    </p>  
-                                </div>
-
-                                <div class="haiku">
-                                    <img class="avatar" src="people/reece.jpg">
-                                    <p>
-                                        Rework, if we do this, the resolution should require the expansion of library operations.
-                                    </p>  
-                                </div>
-                                <span class="replybox"><textarea id="reply_haiku" type="text" rows="2" autocomplete="off" placeholder="comment..." wrap="soft"></textarea> </span>
-                            </div>
                         </div>
 
                     </div>
+
+                    <div class="haikuList"></div>
 
                     
+
+
                 </div>
 
 
-                <!-- COLUMN 3 -->
-                <div class="col newscol">
-                    <div class="widget">
-                        <div class="widgettitle">
-                            <h4>Arizona Star</h4>
-                            <hr>
-                        </div>
-                        <div class="widgetcontent">
-                            <div class="news">
-                                <h4><strong><span style="text-decoration: underline;">Opinion:</span> Failure of Las Amigas Jardineras Housing Projects; The Pitfalls of Lowest-Bidder Carbon Policy and Ethical Neo-Globalism.</strong></h4>
-                                <hr>
-                                <p dir="ltr">
-                                    <strong>August 16, 2085</strong> – A pressing buzzing fills the air in the brand new Las
-                                    Amigas Jardineras neighborhood designed by the rockstar city planning firm,
-                                    Ayacucho STEPS. This neighborhood represents the bleeding edge of global
-                                    urban design. Wind-catchers fan out into the sky, following complex,
-                                    computer-generated curves. Citrus and olive trees are pain-stakingly coaxed
-                                    along narrow, walkable, city streets. The ground is slightly spongy
-                                    underfoot, a mix of ground-up automobile tires and genetically engineered
-                                    mycelium designed to self-heal by filtering microplastics out of runoff. On
-                                    a sweltering 110 degree day, the temperature on the shaded streets of Las
-                                    Amigas is 78 degrees with absolutely zero electricity use. Yet, despite the
-                                    world-class design and over 2000 residents, we saw almost nobody on the
-                                    street. Las Amigas Jardineras has a huge problem: mosquitos.
-                                </p>
 
-                                <img src="img/mosquitopot.jpg" alt="a plant-pot full of mosquitos after a monsoon">
-
-                                <p dir="ltr">
-                                    Tucson municipal planning directive 7 outlines the guidelines for selecting
-                                    a community development proposal during the procurement process.
-                                    Sub-section 7.1.1 states the following:
-                                </p>
-                                <ol style="padding-left: 2.5em;">
-                                    <li dir="ltr">
-                                        <p dir="ltr">
-                                            Limiting lifetime greenhouse gas emissions per housed person must
-                                            be a priority during the selection process of the assigned planning
-                                            committee,
-                                        </p>
-                                    </li>
-                                    <li dir="ltr">
-                                        <p dir="ltr">
-                                            and any positive lifetime greenhouse gas emissions must directly
-                                            contribute to societal well-being and demonstrate value in
-                                            significant excess to the great, societal cost of those emissions.
-                                        </p>
-                                    </li>
-                                    <li dir="ltr">
-                                        <p dir="ltr">
-                                            Greenhouse gas emissions and analysis of societal value must
-                                            conform to proof-standards outlined in section 19.1.
-                                        </p>
-                                    </li>
-                                </ol>
-                                <br/>
-                                <p dir="ltr">
-                                    In practice, proving “value in significant excess” is very difficult
-                                    outside the medical and military fields. This public directive forces a
-                                    type of lowest–bidder process regarding carbon, in the planning committees.
-                                    Over the past 48 years since municipal secession, nine different public
-                                    proposals have unsuccessfully attempted to amend this directive to allow
-                                    greater flexibility for public comfort. Yet, our society still seems
-                                    unready to make such a change. The societal trauma of our grandparent’s
-                                    climate crisis runs very, very deep.
-                                </p>
-                                <hr>
-                                <p dir="ltr">
-                                    In the final selection process for the development, two main design firms
-                                    presented competing proposals. The Pascua Yaqui tribal corporation,
-                                    Planificadores de un Futuro Mejor en el nombre de nuestro Señor de Los
-                                    Milagros (PFM), and the world-renowned Medellín-based design union Ayacucho
-                                    STEPS. PFM’s proposal involved neo-native pueblo-type designs, along with
-                                    several open-source Iranian windcatcher designs specifically designed with
-                                    the desert in mind. PFM representatives also correctly predicted the
-                                    potential issues with mosquitos that Ayacucho would face. According to the
-                                    planning committee’s final report, PFM’s proposal represented a “more
-                                    realistic, sustainable, and diverse quality of life” than the Columbian
-                                    designer’s union could ever offer.
-                                </p>
-                                <br/>
-                                <p dir="ltr">
-                                    Yet, Ayacucho STEPS still won the proposal on the grounds that it had 47%
-                                    lower greenhouse emissions than that of PFM. Unfortunately, PFM’s
-                                    methane-powered rammed-earth construction equipment needed to be shipped by
-                                    road from Santa-Fe. PFM needed most of their production to be performed
-                                    locally, without the efficiency of economies of scale. Ten years ago, their
-                                    proposal would have been very carbon-competitive, but the world has changed
-                                    with the introduction of global rock-star design firms.
-                                </p>
-                                <br/>
-                                <p dir="ltr">
-                                    Ayacucho prefabricates the buildings in Tegucigalpa, cultivates the GMO
-                                    mycelium in Shenzhen, force-grows the olive trees in Brasília, and
-                                    3d-prints the wind catchers in Düsseldorf. Everything ships in on electric
-                                    trains and wingsail cargo ships. Modern global supply lines like this
-                                    eerily echo the days of wanton consumption and unfettered capitalism;
-                                    plastic toys and gadgets shipped across the world in giant diesel-powered
-                                    ships and fleets of dirty trucks, only to be briefly used and shipped back
-                                    as trash to the neo-colonized nation states.
-                                </p>
-                                <br/>
-                                <p dir="ltr">
-                                    Yet despite how it feels emotionally, holistic economic science shows us that the vast global networks of wingsail cargo
-                                    ships, solar trains, and packet-blimps *can* have significantly lower emissions and resource use than doing things
-                                    locally. But this isn’t the whole story, we have to ask what it means for new-society when our social policies
-                                    increasingly encourage centralized thinking. Local sourcing brings resilience and adaptation to the unique realities of
-                                    our ecosystems and environments. Ayacucho STEPS is working on 8 different design projects outside of their biome. Their
-                                    artistry, efficiency, and expertise is world class. But we can’t expect designers in Medellín to understand the unique
-                                    ways that our desert would interact with their work better than a design firm staffed predominantly native peoples who
-                                    have lived on this land since ancient times. What we gain in carbon-efficiency by outsourcing, we lose in local wisdom.
-                                </p>
-                                <br/>
-                                <p dir="ltr">
-                                    It is well understood that public policy must be made with care for the complexities of the human ecosystem. However,
-                                    carbon regulations are often exceptions to these guidelines. The rigidity and asceticism with which we’ve driven
-                                    emissions down has brought us to a safer place on this Earth. But strict, straightforward rules often bring us towards
-                                    patterns that we neither want nor expect. Patterns like neo-globalization. We ought to bring holistic ecological
-                                    considerations to our carbon-policy and try to consider the myriad effects of a single action in a complex world. We
-                                    ought to consider the mosquitos.
-                                </p>
-                                
-
-                            </div> 
-                        </div>
-                        
-                    </div>
-                </div>
-
+               
             </div>
+            
         </div>
         
 
     </div>
 
+    <script src="pronouncing-browser.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
