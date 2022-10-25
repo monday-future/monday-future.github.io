@@ -72,9 +72,11 @@ h6 {
     border: var(--border) solid black;
     border-radius: 25px;
 
-    min-height: calc(100vmin - 30px);
+    min-height: calc(100vh - 30px);
 
 }
+
+
 
 .header {
     display: grid;
@@ -90,6 +92,10 @@ h6 {
     border: var(--border) solid black;
     padding: 15px;
     
+}
+
+@media (max-width:500px) {
+    .header h1 { font-size: 10vw; }
 }
 
 .searchbar {
@@ -124,12 +130,15 @@ h6 {
 
     gap: 10px;
     width: auto;
-    grid-template-columns: 3fr minmax(436px,4fr) 3fr;
+    grid-template-columns: 1fr;
 }
 
 
-@media (min-width:1000px) {
+@media (min-width:500px) {
     .grid {grid-template-columns: 3fr minmax(436px,600px) 3fr;}
+}
+@media (max-width:500px) {
+    .grid {grid-template-columns: 100%;}
 }
 
 
@@ -188,12 +197,16 @@ h6 {
 }
 
 .imgtag {
-  
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
+    
+    display:inline-block;
+    left: 0;
+    position:relative;
+    text-align:center;
+    top: -100px;
+    max-width: 70%;
+    
+
+    font-size: min(18pt,3vw);
    
     background-color: black;
     color: white;
