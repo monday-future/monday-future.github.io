@@ -95,7 +95,7 @@ function showReplyBox (parent,button,haikuobj) {
     ooooooo<br>
     ooooo<br>
 </div>
-<input form="reply" type="submit" class="submitbutton" value="not quite" disabled="true">
+<input form="reply" type="submit" class="submitbutton" value="not quite" disabled="false">
     `
     }
 
@@ -259,13 +259,6 @@ const requests = [
     "REQUEST: \n why did you give it all up?",
     "REQUEST: \n where are we going?",
     "REQUEST: \n why did you need to talk to everyone?",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
 ]
 
 const images = [
@@ -281,13 +274,6 @@ const images = [
     "img/worker.png",
     "img/summer.png",
     "img/westside.png",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
 ]
 
 function newRequest (){
