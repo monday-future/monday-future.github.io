@@ -1,0 +1,41 @@
+/* LIBRARY-WIDGET */
+
+.library {
+  width: 100%;
+}
+
+.library hr {
+  display: block;
+  margin: 5px 0px 10px 0px;
+  border-style: dashed;
+  border-color: black;
+  border-width: 1px;
+  text-align: center;
+}
+
+.library img {
+  display: block;
+  width: 50%;
+  margin: 5px auto;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.library h4 {
+  text-align: center;
+  font-style: normal;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 15pt;
+}
+
+.library h6 {text-align: center;}
+
+.library>.haiku{
+  border: 2px solid black;
+  padding: 5px 5px; 
+
+}
+
+.library .haiku img{
+  width: 25px;
+}

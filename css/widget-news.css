@@ -1,0 +1,27 @@
+/* NEWS-WIDGET */
+
+.news{
+  column-width: 20em;
+}
+
+.news p{
+  margin-bottom: 1em;
+  word-wrap: break-word;
+  column-span: none;
+
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  
+}
+
+.news hr{
+  width: 25%;
+}
+
+.news img{
+  width: 100%;
+  border: var(--border) solid black;
+  float: center;
+  
+}

@@ -1,0 +1,39 @@
+/* WIDGETS */
+
+.widget {
+  background-color: white;
+  border: var(--border) solid black;
+  border-radius: 25px;
+  padding: 5px 25px 15px;
+  margin: 0 0 10px 0;
+
+  height: auto;
+  left: 0px;
+
+}
+
+.widgettitle {
+  margin: 0;
+  padding: 0px;
+}
+
+.widgettitle h4 {
+  margin: 5px 25px;
+  font-weight: 700;
+}
+
+.widgettitle hr {
+  display: block;
+  margin: 5px 0px 10px 0px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  text-align: center;
+
+  position:relative;
+
+  left:-25px;
+
+  width: calc(100% + 50px);
+  
+}

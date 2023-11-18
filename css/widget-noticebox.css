@@ -1,0 +1,13 @@
+
+.noticebox {
+  text-align: left;
+}
+
+.noticebox p {
+  text-align: left;
+  text-transform: lowercase;
+}
+
+.noticebox p em {
+  text-transform: capitalize;
+}

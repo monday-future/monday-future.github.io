@@ -1,0 +1,46 @@
+/* HAIKU-WIDGET */
+
+.avatar {
+  height: 50px;
+  border-radius: 50%;
+  border: var(--border) solid black;
+}
+
+.avatar:hover {
+  border-style: dotted;
+}
+
+.haiku {
+  margin: 20px 0;
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-template-columns: auto 4fr 0px;
+  gap: 10px;
+  align-items: center;
+}
+
+.haiku p {
+  text-align: left;
+  
+}
+
+.haiku>.haiku {
+  margin-top: 0px; 
+  margin-bottom: 0px;
+}
+
+.replybox {
+  width: 100%;
+}
+
+.replybox textarea{
+  font-family: inherit;
+  font-size: 100%; 
+  width:100%;
+  resize: none; 
+  border: var(--border) solid black;
+  border-radius: 25px;
+  padding: 20px 20px; 
+
+}

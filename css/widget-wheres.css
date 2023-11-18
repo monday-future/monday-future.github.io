@@ -1,0 +1,54 @@
+/* WHEREAS-WIDGET */
+
+.whereas p{
+  text-indent: -6em; 
+  margin-left: 6em;
+  margin-bottom: 0.5em;
+  
+}
+
+.whereashaiku .haiku img{
+  width: 35px;
+  height: auto;
+}
+
+.button-container{
+  margin: 10px 0px 10px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button-container input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.vote{
+
+  width: fit-content;
+  background-color: white;
+  border: var(--border) solid black;
+
+  padding: 5px;
+
+}
+
+.button-container:hover input ~ .vote {
+  font-weight: 700;
+}
+
+.button-container input:checked ~ .vote {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+} 

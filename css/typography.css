@@ -1,0 +1,62 @@
+/* TYPOGRAPHY */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,600;1,400;1,700&family=Quicksand:wght@500;700&display=swap');
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style:wavy;
+}
+
+body {
+  text-align: left;
+  font-family: "Quicksand", sans-serif;
+  font-variant: normal;
+  font-weight: 500;
+  font-size: 11pt;
+
+}
+
+p {
+  margin: 0px;
+  text-align: justify;
+  text-justify: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+h1 {
+  font-family: "IBM Plex Mono", monospace,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 55.0pt;
+}
+
+h2 {
+  font-family: "IBM Plex Mono", monospace,sans-serif;
+  font-weight: 400;
+  font-style:italic;
+  font-size: 30.0pt;
+}
+
+h4 {
+  font-family: "IBM Plex Mono", monospace,sans-serif;
+  font-weight: 400;
+  font-style:italic;
+  font-size: 12.0pt;
+  margin:0px
+}
+
+h6 {
+  font-family: "IBM Plex Mono", monospace,sans-serif;
+  font-weight: 400;
+  font-style:italic;
+  font-size: 10.0pt;
+  margin:0px
+}
